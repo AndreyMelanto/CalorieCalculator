@@ -1,0 +1,184 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+      width: 1vh;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--first_color);
+      border-radius: 20px;
+    }
+}
+
+
+
+
+
+.no_select {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+
+
+
+
+.bold {
+    font-weight: bold;
+}
+
+
+
+
+
+@keyframes about_animate {
+    from {margin-top: -10vh; opacity: 0.3}
+    to {margin-top: 5%; opacity: 1}
+}
+@keyframes left_animate {
+    from {margin-left: -20vw; opacity: 0.3}
+    to {margin-left: 0; opacity: 1}
+}
+@keyframes right_animate {
+    from {margin-right: -20vw; opacity: 0.3}
+    to {margin-right: 0; opacity: 1}
+}
+
+@keyframes about_mobile_animate {
+    from {margin-top: -10vh; opacity: 0.3}
+    to {margin-top: 10%; opacity: 1}
+}
+@keyframes left_mobile_animate {
+    from {opacity: 0.3}
+    to {opacity: 1}
+}
+@keyframes right_mobile_animate {
+    from {opacity: 0.3}
+    to {opacity: 1}
+}
+
+
+
+@keyframes recipes_animate {
+    from {margin-top: -5vh; opacity: 0.3}
+    to {margin-top: 5vh; opacity: 1}
+}
+
+
+
+@keyframes table_animate {
+    from {margin-top: -10vh; opacity: 0.3}
+    to {margin-top: 0; opacity: 1}
+}
+
+
+
+@keyframes profile_products_animate {
+    from {right: 0vw; opacity: 0.3}
+    to {right: 5vw; opacity: 1}
+}
+@keyframes profile_statistics_animate {
+    from {top: 10vh; left: 0; opacity: 0.3}
+    to {top: 13vh; left: 5vw; opacity: 1}
+}
+@keyframes profile_buttons_animate {
+    from {top: 71vh; opacity: 0.3}
+    to {top: 68vh; opacity: 1}
+}
+@keyframes profile_b1_animate {
+    from {margin-left: -10vw; opacity: 0.3}
+    to {margin-left: 0; opacity: 1}
+}
+@keyframes profile_b2_animate {
+    from {margin-left: -12vw; opacity: 0.3}
+    to {margin-left: 0; opacity: 1}
+}
+@keyframes profile_b3_animate {
+    from {margin-left: -14vw; opacity: 0.3}
+    to {margin-left: 0; opacity: 1}
+}
+@keyframes profile_statistics_mobile_animate {
+    from {top: 8vh; opacity: 0.3}
+    to {top: 13vh; opacity: 1}
+}
+@keyframes profile_products_mobile_animate {
+    from {top: 63vh; opacity: 0.3}
+    to {top: 68vh; opacity: 1}
+}
+
+
+
+@keyframes calculator_form_animate {
+    from {top: 2%; left: -5%; opacity: 0.3}
+    to {top: 7%; left: 5%; opacity: 1}
+}
+@keyframes calculator_result_animate {
+    from {top: 12%; right: -5%; opacity: 0.3}
+    to {top: 7%; right: 5%; opacity: 1}
+}
+@keyframes calculator_form_mobile_animate {
+    from {top: 2%; opacity: 0.3}
+    to {top: 7%; opacity: 1}
+}
+@keyframes calculator_result_mobile_animate {
+    from {top: 93vh; opacity: 0.3}
+    to {top: 98vh; opacity: 1}
+}
+
+
+
+@keyframes recipe_title_animate {
+    from {margin-top: -10vh; opacity: 0.3}
+    to {margin-top: 5vh; opacity: 1}
+}
+@keyframes main_recipe_image_animate {
+    from {margin-left: -40vw; opacity: 0.3}
+    to {margin-left: 0; opacity: 1}
+}
+@keyframes recipe_description_animate {
+    from {right: -40vw; opacity: 0.3}
+    to {right: 0; opacity: 1}
+}
+@keyframes left_info_animation {
+    from {margin-left: -20vw; opacity: 0.3}
+    to {margin-left: 0; opacity: 1}
+}
+@keyframes right_info_animation {
+    from {margin-right: -20vw; opacity: 0.3}
+    to {margin-right: 0; opacity: 1}
+}
+
+
+
+@keyframes modal_window_animate {
+    from {top: -320px; opacity: 0}
+    to {top: 30%; opacity: 1}
+}
+@keyframes modal_window_background_animate {
+    from {opacity: 0}
+    to {opacity: 0.8}
+}
+
+
+
+@keyframes opacity_in {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+@keyframes _opacity_in {
+    from {opacity: 0.3}
+    to {opacity: 1}
+}
+
+
+
+@keyframes error_animate {
+    from {top: -20%; opacity: 0}
+    to {top: 3%; opacity: 1}
+}

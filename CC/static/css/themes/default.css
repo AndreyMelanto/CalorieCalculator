@@ -1,0 +1,120 @@
+body {
+    --first_color: #ffb647;
+}
+
+
+.background {
+    background: #faf5e4;
+}
+
+
+.text {
+    color: #fff1db;
+}
+.text_hover {
+    &:hover {
+        color: #fff1db;
+    }
+}
+
+
+.cpfc_text {
+    color: #f80;
+}
+
+
+.input_border {
+    border-color: #dbdbdb;
+}
+
+
+.product_list_border {
+    & td {
+        border-bottom: 0.4vh #ffd494 solid;
+    }
+}
+
+
+.table_rows {
+    & tbody:nth-child(even) {
+        background: #ffd494;
+    }
+}
+
+
+.add_button_border_color {
+    border-color: #ffb647;
+}
+
+
+.error_text {
+    color: #f01d1d;
+    font-weight: bold;
+    font-size: 2.8vh;
+}
+
+
+.default_shadow_color {
+    box-shadow: 0  0 2vh #5c5c5c;
+}
+.input_shadow_color {
+    box-shadow: 0  0 1vh #5c5c5c;
+}
+
+
+
+
+
+.first_color {
+    background: #ffb647;
+}
+.first_color_hover {
+    &:hover {
+        background: #ffb647;
+    }
+}
+.first_shadow_color {
+    box-shadow: 0  0 2vh #ffb647;
+}
+
+
+
+.second_color {
+    background: #ff9c08;
+}
+.second_text_color {
+    color: #ff9c08;
+}
+.second_text_color_hover {
+    &:hover {
+        color: #ff9c08;
+    }
+}
+.second_border_color {
+    border: 0.5vh #ff9c08 solid;
+}
+.second_shadow_color {
+    box-shadow: 0  0 2vh #ff9c08;
+}
+.second_shadow_color_hover {
+    &:hover {
+        box-shadow: 0 0 2vh #ff9c08;
+    }
+}
+
+
+
+.third_color {
+    background: #ffd494;
+}
+.third_text_color {
+    color: #ffd494;
+}
+.third_text_color_hover {
+    &:hover {
+        color: #ffd494;
+    }
+}
+.third_border_color {
+    border-color: #ffd494;
+}

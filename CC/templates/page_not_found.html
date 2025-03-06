@@ -1,0 +1,15 @@
+{% extends 'pattern.html' %}
+{% load static %}
+
+{% block title %}Страница не найдена{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'account/css/password_change_done.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="wrapper">
+    <span class="third_text_color bold">Страница не найдена</span>
+    <a class="second_color text third_text_color_hover second_shadow_color" href="{% url 'main' %}">На главную</a>
+</div>
+{% endblock %}
