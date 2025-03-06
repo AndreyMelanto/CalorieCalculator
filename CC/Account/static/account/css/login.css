@@ -1,0 +1,86 @@
+body {
+    overflow: hidden;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .errors {
+        max-width: 90%;
+        animation-name: error_animate;
+        animation-duration: 0.5s;
+        padding: 2%;
+        position: absolute;
+        top: 3%;
+        background: #ff3838;
+        color: #00;
+        border-radius: 3vh;
+        .errorlist {
+            margin: 0;
+            padding: 0;
+        }
+        & li {
+             list-style-type: none;
+        }
+    }
+
+    & form {
+        width: 40%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 3vh;
+        .title {
+            margin-top: 5%;
+            font-size: 3.7vh;
+        }
+        .inputs {
+            width: 80%;
+            height: 40%;
+            margin-top: 3%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            & input {
+                width: 100%;
+                height: 25%;
+                padding: 0 2% 0 2%;
+                box-sizing: border-box;
+                border-radius: 2vh;
+                outline: none;
+                font-size: 2.5vh;
+            }
+        }
+        & button {
+            width: 80%;
+            height: 12%;
+            border: none;
+            border-radius: 10vh;
+            font-size: 3vh;
+            transition: color 0.3s;
+        }
+        .buttons {
+            width: 80%;
+            height: 17%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 2.3vh;
+            & a {
+                width: 47%;
+                height: 50%;
+                text-decoration: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 10vh;
+                transition: color 0.3s;
+            }
+        }
+    }
+}

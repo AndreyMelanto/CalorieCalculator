@@ -1,0 +1,42 @@
+{% extends 'pattern.html' %}
+{% load static %}
+
+{% block title %}Вход{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'account/css/login.css' %}">
+<link rel="stylesheet" href="{% static 'account/css_adaptation/login.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="wrapper">
+    {% if form.non_field_errors or form.errors %}
+        <div class="errors default_shadow_color bold">
+            {{ form.non_field_errors }}
+            {{ form.username.errors }}
+            {{ form.email.errors }}
+            {{ form.password1.errors }}
+            {{ form.password2.errors }}
+        </div>
+    {% endif %}
+
+    <form class="first_color second_shadow_color" method="post">
+        {% csrf_token %}
+        <span class="title text bold">Вход</span>
+        <div class="inputs">
+            {% for f in form %}
+            {{ f }}
+            {% endfor %}
+        </div>
+        <button class="second_color text third_text_color_hover">Войти</button>
+        <div class="buttons">
+            <a class="second_color third_text_color text_hover" href="{% url 'registration' %}">Регистрация</a>
+            <a class="second_color third_text_color text_hover" href="{% url 'password_reset' %}">Сбросить пароль</a>
+        </div>
+    </form>
+</div>
+{% endblock %}
+
+{% block js %}
+<script>keyboard_ignore()</script>
+{% endblock %}
