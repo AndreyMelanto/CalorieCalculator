@@ -1,0 +1,50 @@
+{% extends 'main/pattern_for_main_pages.html' %}
+{% load static %}
+
+{% block title %}Пищевая ценность{% endblock %}
+
+{% block head_for_main_page %}
+<link rel="stylesheet" href="{% static 'main/css/table.css' %}">
+<link rel="stylesheet" href="{% static 'main/css_adaptation/table.css' %}">
+{% endblock %}
+
+
+
+{% block body_for_main_page %}
+<div class="search background">
+    <input class="third_color input_border" id="input" placeholder="Введите название продукта">
+</div>
+
+<div class="wrapper">
+    <div class="table" id="whole table">
+        <div class="background table_title">
+            <table>
+                <tr class="first_color">
+                    <th class="first_column">Продукт</th>
+                    <th class="second_column">Калорийность</th>
+                    <th class="third_to_fifth_column">Белки</th>
+                    <th class="third_to_fifth_column">Жиры</th>
+                    <th class="third_to_fifth_column">Углеводы</th>
+                    <th class="sixth_column background"></th>
+                </tr>
+            </table>
+        </div>
+        <table class="table_body table_rows" id="table"></table>
+    </div>
+</div>
+
+<div class="save_product_window" id="save product window">
+    <div class="background_for_window" id="background for window"></div>
+    <div class="window first_color">
+        <div id="save product text" class="text"></div>
+        <input class="input_border third_color" id="input count" placeholder="Масса в граммах">
+        <div class="error error_text" id="error"></div>
+        <button class="ok_button second_color third_text_color third_border_color" id="ok button">Добавить</button>
+        <button class="no_button second_color third_text_color third_border_color" id="no button">Отмена</button>
+    </div>
+</div>
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'main/js/table.js' %}"></script>
+{% endblock %}

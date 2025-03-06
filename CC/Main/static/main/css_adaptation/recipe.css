@@ -1,0 +1,136 @@
+@media (max-width: 1220px) {
+    .wrapper {
+        .recipe_title {
+            padding: 1.5vh 3vw 1.5vh 3vw;
+            font-size: 2.8vh;
+            animation: none;
+        }
+        .main_info {
+            margin-top: 5vh;
+            height: auto;
+            flex-direction: column;
+            .main_image {
+                width: 100%;
+                height: 35vh;
+                animation: none;
+            }
+            .description {
+                position: static;
+                margin-top: 5vh;
+                width: 100%;
+                top: 50%;
+                box-sizing: border-box;
+                animation: none;
+                font-size: 2.3vh;
+            }
+        }
+
+        .other {
+            margin-top: 5vh;
+            flex-direction: column;
+            .left_info {
+                width: 100%;
+                animation: none;
+                .info {
+                    padding: 3vh 5vw 2vh 5vw;
+                    box-sizing: border-box;
+                    & span {
+                        font-size: 3vh;
+                    }
+                    & div {
+                        font-size: 2.4vh;
+                    }
+                }
+
+                .nutrients {
+                    padding: 3vh 5vw 2vh 5vw;
+                    box-sizing: border-box;
+                }
+            }
+
+            .right_info {
+                width: 100%;
+                animation: none;
+                margin-top: 5vh;
+                .ingredients {
+                    padding: 3vh 5vw 5vh 5vw;
+                    .group {
+                        font-size: 3vh;
+                    }
+                    .ingredient {
+                        font-size: 2.4vh;
+                    }
+                }
+            }
+        }
+
+        .steps {
+            margin-top: 5vh;
+            & div {
+                margin-bottom: 3vh;
+                flex-direction: column;
+                & img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 7vh;
+                }
+                .step_title {
+                    margin: 1.7vh 0 1.7vh 0;
+                    font-size: 3.7vh;
+                }
+                .step_text {
+                    width: 100%;
+                }
+            }
+            .step_odd {
+                flex-direction: column;
+                .step_title {
+                    transform: rotate(0deg);
+                    right: 0;
+                }
+            }
+            .step_even {
+                .step_title {
+                    transform: rotate(0deg);
+                    left: 0;
+                }
+            }
+        }
+
+        .save_product_window {
+            .window {
+                width: 70vw;
+                height: 35vh;
+
+                .text {
+                    font-size: 3vh;
+                }
+                .error {
+                    position: absolute;
+                    top: 60%;
+                }
+
+                & button {
+                    height: 15%;
+                    font-size: 2.3vh;
+                }
+                .no_button {
+                    left: 8%;
+                }
+                .ok_button {
+                    right: 8%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .wrapper {
+        .save_product_window {
+            .window {
+                width: 90vw;
+            }
+        }
+    }
+}

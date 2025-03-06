@@ -1,0 +1,41 @@
+@media(max-width: 700px) {
+    .wrapper {
+        & div {
+            width: 70%;
+        }
+        .left {
+            left: -10%;
+        }
+        .right {
+            right: -10%;
+        }
+    }
+}
+
+@media(max-width: 530px) {
+    .wrapper {
+        & div {
+            width: 90%;
+            margin-top: 10%;
+            & span {
+                font-size: 4vh;
+                margin-top: 5.5%;
+            }
+            & p {
+                margin-bottom: 6%;
+                font-size: 2.5vh;
+            }
+        }
+        .about {
+            animation-name: about_mobile_animate;
+        }
+        .left {
+            left: 0;
+            animation-name: left_mobile_animate;
+        }
+        .right {
+            animation-name: right_mobile_animate;
+            right: 0;
+        }
+    }
+}

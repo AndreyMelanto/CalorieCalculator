@@ -1,0 +1,26 @@
+{% extends 'main/pattern_for_main_pages.html' %}
+{% load static %}
+
+{% block title %}Рецепты{% endblock %}
+
+{% block head_for_main_page %}
+<link rel="stylesheet" href="{% static 'main/css/recipes.css' %}">
+<link rel="stylesheet" href="{% static 'main/css_adaptation/recipes.css' %}">
+{% endblock %}
+
+
+
+{% block body_for_main_page %}
+<div class="search background">
+    <input class="third_color input_border input_shadow_color" id="input" placeholder="Введите запрос">
+    <div class="buttons">
+        <button class="products_search second_color third_text_color text_hover second_shadow_color">Поиск по продуктам</button>
+        <button class="title_search second_color third_text_color text_hover second_shadow_color">Поиск по названию</button>
+    </div>
+</div>
+<div class="wrapper"></div>
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'main/js/recipes.js' %}"></script>
+{% endblock %}

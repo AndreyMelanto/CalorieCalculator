@@ -1,0 +1,96 @@
+{% extends 'main/pattern_for_main_pages.html' %}
+{% load static %}
+
+{% block title %}{% endblock %}
+
+{% block head_for_main_page %}
+<link rel="stylesheet" href="{% static 'main/css/recipe.css' %}">
+<link rel="stylesheet" href="{% static 'main/css_adaptation/recipe.css' %}">
+{% endblock %}
+
+
+
+{% block body_for_main_page %}
+<div class="wrapper">
+    <div class="recipe_title second_color second_shadow_color text bold"></div>
+    <div class="main_info">
+        <div class="main_image default_shadow_color"></div>
+        <div class="description first_color text first_shadow_color no_select" onclick="open_description(this)"></div>
+    </div>
+    <div class="other">
+        <div class="left_info">
+            <div class="info first_color cpfc_text second_shadow_color">
+                <span class="text bold">Информация</span>
+                <div id="recipe count"></div>
+                <div id="all"></div>
+                <div id="active"></div>
+            </div>
+            <div class="nutrients first_color second_shadow_color">
+                <span class="title text bold">Пищевая ценность</span>
+                <div class="chart">
+                    <div class="calories" id="calories"></div>
+                    <div class="pfc bold">
+                        <div class="proteins" id="proteins"></div>
+                        <div class="fats" id="fats"></div>
+                        <div class="carbohydrates" id="carbohydrates"></div>
+                    </div>
+                </div>
+                <div class="des text">
+                    <div class="calories bold">
+                        <div class="calories_color"></div>
+                        <div id="calories info"></div>
+                    </div>
+                    <div class="nutrients_des">
+                        <div class="proteins">
+                            <div class="proteins_color round"></div>
+                            <div class="count">
+                                <span class="bold" id="proteins info"></span>
+                                <span>Белки</span>
+                            </div>
+                        </div>
+                        <div class="fats">
+                            <div class="fats_color round"></div>
+                            <div class="count">
+                                <span class="bold" id="fats info"></span>
+                                <span>Жиры</span>
+                            </div>
+                        </div>
+                        <div class="carbohydrates">
+                            <div class="carbohydrates_color round"></div>
+                            <div class="count">
+                                <span class="bold" id="carbohydrates info"></span>
+                                <span>Углеводы</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="second_color third_text_color text_hover" id="save recipe button" onclick="save_product(this)" type="button">Добавить в расчет</button>
+            </div>
+        </div>
+        <div class="right_info">
+            <div class="ingredients first_color second_shadow_color">
+                <span class="ingredients_title text bold">Ингредиенты</span>
+                <div id="ing info"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="steps"></div>
+
+    <div class="save_product_window" id="save product window">
+    <div class="background_for_window" id="background for window"></div>
+    <div class="window first_color">
+        <div id="save product text" class="text"></div>
+        <input class="input_border third_color" id="input count" placeholder="Масса в граммах">
+        <div class="error error_text" id="error"></div>
+        <button class="ok_button second_color third_text_color third_border_color" id="ok button">Добавить</button>
+        <button class="no_button second_color third_text_color third_border_color" id="no button">Отмена</button>
+    </div>
+</div>
+</div>
+{% endblock %}
+
+{% block js %}
+<span id="recipe id" style="display: none;">{{ recipe_id }}</span>
+<script src="{% static 'main/js/recipe.js' %}"></script>
+{% endblock %}

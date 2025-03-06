@@ -1,0 +1,89 @@
+{% extends 'main/pattern_for_main_pages.html' %}
+{% load static %}
+
+{% block title %}Профиль{% endblock %}
+
+{% block head_for_main_page %}
+<link rel="stylesheet" href="{% static 'main/css/profile.css' %}">
+<link rel="stylesheet" href="{% static 'main/css_adaptation/profile.css' %}">
+{% endblock %}
+
+
+
+{% block body_for_main_page %}
+<div class="wrapper no_select">
+    <div class="statistics first_color second_shadow_color">
+        <div class="statistics_title text">Ваша статистика</div>
+        <div class="info">
+            <div>
+                <span class="cpfc_text" id="calories title">К</span>
+                <div>
+                    <div id="calories"></div>
+                    <div class="more second_text_color second_border_color no_select" onmouseover="more_info_hover(this)" onmouseout="more_info_out(this)" id="calories more">
+                        <h4>?</h4>
+                        <span class="second_color text calories_info" id="calories info"></span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <span class="cpfc_text" id="proteins title">Б</span>
+                <div>
+                    <div id="proteins"></div>
+                    <div class="more second_text_color second_border_color no_select" onmouseover="more_info_hover(this)" onmouseout="more_info_out(this)" id="proteins more">
+                        <h4>?</h4>
+                        <span class="second_color text" id="proteins info"></span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <span class="cpfc_text" id="fats title">Ж</span>
+                <div>
+                    <div id="fats"></div>
+                    <div class="more second_text_color second_border_color no_select" onmouseover="more_info_hover(this)" onmouseout="more_info_out(this)" id="fats more">
+                        <h4>?</h4>
+                        <span class="second_color text" id="fats info"></span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <span class="cpfc_text" id="carbohydrates title">У</span>
+                <div>
+                    <div id="carbohydrates"></div>
+                    <div class="more second_text_color second_border_color no_select" onmouseover="more_info_hover(this)" onmouseout="more_info_out(this)" id="carbohydrates more">
+                        <h4>?</h4>
+                        <span class="second_color text" id="carbohydrates info"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="calculator_button">
+            <a class="second_color third_text_color text_hover" href="{% url 'calculator' %}">Рассчитать суточную норму</a>
+        </div>
+    </div>
+
+    <div class="products first_color second_shadow_color">
+        <table class="products_title text" id="products title"></table>
+        <div class="products_list text">
+            <table class="product_list_border" id="product list"></table>
+        </div>
+        <div class="clear_button">
+            <button class="second_color third_text_color text_hover" id="delete all products">Очистить</button>
+        </div>
+    </div>
+
+    <div class="profile_buttons">
+        <form method="GET">
+            {% csrf_token %}
+            <button class="telegram first_color text second_text_color_hover second_shadow_color" onclick="link_telegram()">Привязать телеграм</button>
+            <button class="password_change first_color text second_text_color_hover second_shadow_color" formaction="{% url 'password_change' %}">Сменить пароль</button>
+            <button class="logout first_color text second_text_color_hover second_shadow_color" formmethod="POST" formaction="{% url 'logout' %}?next=/">Выйти из аккаунта</button>
+        </form>
+    </div>
+
+    <div class="empty"></div>
+</div>
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'main/js/profile.js' %}"></script>
+{% endblock %}

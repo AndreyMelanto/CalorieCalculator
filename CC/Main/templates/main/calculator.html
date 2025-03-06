@@ -1,0 +1,96 @@
+{% extends 'main/pattern_for_main_pages.html' %}
+{% load static %}
+
+{% block title %}Калькулятор{% endblock %}
+
+{% block head_for_main_page %}
+<link rel="stylesheet" href="{% static 'main/css/calculator.css' %}">
+<link rel="stylesheet" href="{% static 'main/css_adaptation/calculator.css' %}">
+{% endblock %}
+
+
+
+{% block body_for_main_page %}
+<div class="wrapper">
+    <div class="window first_color second_shadow_color">
+        <span class="text no_select">Основная информация</span>
+        <div class="gender c_button no_select">
+            <div class="second_border_color cpfc_text text_hover" onclick="gender_button_click(this)" id="women">Женщина</div>
+            <div class="second_border_color cpfc_text text_hover" onclick="gender_button_click(this)" id="man">Мужчина</div>
+        </div>
+        <div class="inputs">
+            <input class="second_color third_border_color" id="age" placeholder="Возраст">
+            <input class="second_color third_border_color" id="height" placeholder="Рост, см">
+            <input class="second_color third_border_color" id="weight" placeholder="Вес, кг">
+        </div>
+
+        <span class="text no_select">Дневная активность</span>
+        <div class="activity c_button no_select">
+            <div class="second_border_color cpfc_text text_hover" onclick="activity_button_click(this)" onmouseover="activity_button_hover(this)" onmouseout="activity_button_out(this)" id="1">Очень низкая</div>
+            <div class="second_border_color cpfc_text text_hover" onclick="activity_button_click(this)" onmouseover="activity_button_hover(this)" onmouseout="activity_button_out(this)" id="2">Низкая</div>
+            <div class="second_border_color cpfc_text text_hover" onclick="activity_button_click(this)" onmouseover="activity_button_hover(this)" onmouseout="activity_button_out(this)" id="3">Средняя</div>
+            <div class="second_border_color cpfc_text text_hover" onclick="activity_button_click(this)" onmouseover="activity_button_hover(this)" onmouseout="activity_button_out(this)" id="4">Высокая</div>
+            <div class="second_border_color cpfc_text text_hover" onclick="activity_button_click(this)" onmouseover="activity_button_hover(this)" onmouseout="activity_button_out(this)" id="5">Очень высокая</div>
+        </div>
+        <span class="activity_description cpfc_text no_select" id="activity description"></span>
+
+        <span class="goal_title text no_select">Ваша цель</span>
+        <div class="goal c_button no_select">
+            <div class="second_border_color cpfc_text text_hover" onclick="goal_button_click(this)" id="-">Сбросить вес</div>
+            <div class="second_border_color cpfc_text text_hover" onclick="goal_button_click(this)" id="0">Поддерживать вес</div>
+            <div class="second_border_color cpfc_text text_hover" onclick="goal_button_click(this)" id="+">Набрать вес</div>
+        </div>
+
+        <div class="enter_button second_color third_text_color text_hover no_select" id="get result">Рассчитать</div>
+    </div>
+
+    <div class="result first_color second_shadow_color no_select">
+        <div class="title text bold">Результаты</div>
+        <div class="chart">
+            <div class="calories" id="calories"></div>
+            <div class="nutrients">
+                <div class="proteins" id="proteins"></div>
+                <div class="fats" id="fats"></div>
+                <div class="carbohydrates" id="carbohydrates"></div>
+            </div>
+        </div>
+        <div class="info text">
+            <div class="calories bold">
+                <div class="calories_color"></div>
+                <div id="calories info">2500 Ккал</div>
+            </div>
+            <div class="nutrients">
+                <div class="proteins">
+                    <div class="proteins_color round"></div>
+                    <div class="count">
+                        <span class="bold" id="proteins info">80г</span>
+                        <span>Белки</span>
+                    </div>
+                </div>
+                <div class="fats">
+                    <div class="fats_color round"></div>
+                    <div class="count">
+                        <span class="bold" id="fats info">80г</span>
+                        <span>Жиры</span>
+                    </div>
+                </div>
+                <div class="carbohydrates">
+                    <div class="carbohydrates_color round"></div>
+                    <div class="count">
+                        <span class="bold" id="carbohydrates info">80г</span>
+                        <span>Углеводы</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="msg_empty text">Здесь будет результат</div>
+        <span class="msg text">Результаты сохранены, теперь вы можете смотреть свою статистику в профиле</span>
+    </div>
+
+    <div class="empty"></div>
+</div>
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'main/js/calculator.js' %}"></script>
+{% endblock %}

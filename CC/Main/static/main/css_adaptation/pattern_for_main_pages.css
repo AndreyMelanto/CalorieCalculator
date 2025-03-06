@@ -1,0 +1,61 @@
+@media (max-width: 760px) {
+    .menu {
+        .profile {
+            & div {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 530px) {
+    .menu {
+        .menu_buttons {
+            & a {
+                font-size: 2.3vh;
+            }
+        }
+    }
+}
+
+@media (max-width: 430px) {
+    .menu {
+        .menu_buttons {
+            & a {
+                width: 30%;
+                font-size: 2vh;
+            }
+        }
+    }
+}
+
+@media (max-width: 410px) {
+    .menu {
+        .menu_buttons {
+            & a {
+                font-size: 1.9vh;
+            }
+        }
+    }
+}
+
+@media (max-width: 340px) {
+    .menu {
+        .menu_buttons {
+            & a {
+                width: 31%;
+            }
+        }
+    }
+}
+
+@media (max-width: 310px) {
+    .menu {
+        .menu_buttons {
+            & a {
+                width: 32%;
+                font-size: 2vh;
+            }
+        }
+    }
+}

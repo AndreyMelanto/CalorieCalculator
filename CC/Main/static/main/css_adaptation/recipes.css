@@ -1,0 +1,38 @@
+@media (max-width: 1100px) {
+    .search {
+        & input {
+            width: 50%;
+        }
+        .buttons {
+            width: 52%;
+        }
+    }
+    .wrapper {
+        .recipe {
+            width: 45vw;
+            height: 30vh;
+            margin-bottom: 4vh;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .search {
+        height: 15vh;
+        & input {
+            width: 80%;
+            height: 42%
+        }
+        .buttons {
+            width: 82%;
+            height: 42%;
+        }
+    }
+    .wrapper {
+        .recipe {
+            width: 90vw;
+            height: 30vh;
+            margin-bottom: 4vh;
+        }
+    }
+}

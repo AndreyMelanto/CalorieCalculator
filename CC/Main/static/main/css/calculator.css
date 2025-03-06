@@ -1,0 +1,247 @@
+.wrapper {
+    width: 100vw;
+    height: 93vh;
+    position: relative;
+
+    .window {
+        width: 42.5%;
+        height: 86%;
+        position: absolute;
+        top: 7%;
+        left: 5%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 3vh;
+        animation-name: calculator_form_animate;
+        animation-duration: 0.7s;
+
+        & span {
+            font-size: 3.5vh;
+            font-weight: bold;
+            margin: 5% 0 2% 0;
+        }
+        .activity_description {
+            width: 90%;
+            font-size: 2.3vh;
+        }
+
+        .c_button {
+            width: 97%;
+            height: 8%;
+            display: flex;
+            justify-content: space-around;
+            & div {
+                width: 20%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                border-radius: 1.8vh;
+                transition: color 0.3s, background 0.3s;
+                font-size: 2.4vh;
+            }
+        }
+        .gender {
+            & div {
+                width: 20%;
+            }
+        }
+        .activity {
+            & div {
+                width: 17%;
+            }
+        }
+        .goal {
+            & div {
+                width: 23%;
+            }
+        }
+
+        .inputs {
+            width: 97%;
+            height: 5%;
+            margin-top: 5%;
+            display: flex;
+            justify-content: space-around;
+
+            & input {
+                width: 25%;
+                height: 100%;
+                padding: 0 1% 0 1%;
+                border-width: 0.35vh;
+                border-radius: 1.7vh;
+                outline: none;
+                font-size: 2.4vh;
+            }
+        }
+
+        .goal_title {
+            height: 5%;
+            position: absolute;
+            top: 60%;
+        }
+        .goal {
+            position: absolute;
+            top: 72%;
+        }
+
+
+        .enter_button {
+            width: 80%;
+            height: 8%;
+            position: absolute;
+            bottom: 5%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 3vh;
+            transition: color 0.3s;
+            font-size: 3.8vh;
+        }
+    }
+
+    .result {
+        width: 42.5%;
+        height: 57%;
+        position: absolute;
+        top: 7%;
+        right: 5%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 3vh;
+        animation-name: calculator_result_animate;
+        animation-duration: 0.7s;
+
+        .title {
+            font-size: 3.5vh;
+            margin: 5% 0 3% 0;
+        }
+
+        .chart {
+            width: 90%;
+            height: 20%;
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            .calories {
+                width: 5%;
+                height: 52%;
+                background: #1df224;
+                border-radius: 3vh;
+                transition: width 1s;
+            }
+            .nutrients {
+                width: 100%;
+                height: 42%;
+                display: flex;
+                justify-content: space-between;
+                .proteins {
+                    width: 5%;
+                    height: 100%;
+                    border-radius: 3vh;
+                    background: #f01d1d;
+                    transition: width 1s;
+                }
+                .fats {
+                    width: 5%;
+                    height: 100%;
+                    border-radius: 3vh;
+                    background: #f2eb1d;
+                    transition: width 1s;
+                }
+                .carbohydrates {
+                    width: 5%;
+                    height: 100%;
+                    border-radius: 3vh;
+                    background: #0095ff;
+                    transition: width 1s;
+                }
+            }
+        }
+
+        .msg_empty {
+            position: absolute;
+            top: 49%;
+        }
+
+        .info {
+            width: 100%;
+            margin-top: 5vh;
+            font-size: 2.5vh;
+            display: none;
+
+            .calories {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                .calories_color {
+                    width: 2.5vh;
+                    height: 2.5vh;
+                    margin-right: 1vh;
+                    background: #1df224;
+                    border-radius: 100%;
+                }
+            }
+
+            .nutrients {
+                width: 100%;
+                margin-top: 5%;
+                display: flex;
+                justify-content: space-around;
+
+                & div {
+                    display: flex;
+                    align-items: center;
+
+                    .round {
+                        width: 2.5vh;
+                        height: 2.5vh;
+                        margin-right: 1vh;
+                        border-radius: 100%;
+                    }
+                    .proteins_color {
+                        background: #f01d1d;
+                    }
+                    .fats_color {
+                        background: #f2eb1d;
+                    }
+                    .carbohydrates_color {
+                        background: #0095ff;
+                    }
+                    & div {
+                        display: flex;
+                        flex-direction: column;
+
+                        .count {
+                            & span {
+                                width: 100%;
+                                display: flex;
+                                justify-content: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .msg {
+            display: none;
+            position: absolute;
+            margin: 0 5% 0 5%;
+            bottom: 7%;
+        }
+    }
+
+    .empty {
+        width: 100%;
+        height: 1px;
+        display: none;
+        position: absolute;
+        top: 155vh;
+    }
+}

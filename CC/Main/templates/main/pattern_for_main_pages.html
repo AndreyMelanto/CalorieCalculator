@@ -1,0 +1,35 @@
+{% extends 'pattern.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'main/css/pattern_for_main_pages.css' %}">
+<link rel="stylesheet" href="{% static 'main/css_adaptation/pattern_for_main_pages.css' %}">
+{% block head_for_main_page %}
+{% endblock %}
+{% endblock %}
+
+{% block body %}
+<div class="menu first_color no_select second_shadow_color">
+    <div class="logo">
+       <a href="{% url 'main' %}"><img src="{% static 'img/logo.png' %}"></a>
+    </div>
+
+    <div class="menu_buttons">
+        <a class="second_color text" href="{% url 'main' %}">Главная</a>
+        <a class="second_color text" href="{% url 'recipes' %}">Рецепты</a>
+        <a class="second_color text" href="{% url 'table' %}">Продукты</a>
+    </div>
+
+    <a class="profile" href="{% url 'profile' %}">
+        {% if user.id != None %}
+            <div class="third_text_color">{{user.username}}</div>
+            <img id="photo" src="{% static 'account/img/user.png' %}">
+        {% else %}
+            <span class="cpfc_text" style="position:absolute; right:15%;">Войти</span>
+        {% endif %}
+    </a>
+</div>
+<div class="padding"></div>
+{% block body_for_main_page %}
+{% endblock %}
+{% endblock %}

@@ -1,0 +1,390 @@
+.wrapper {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .recipe_title {
+        max-width: 70vw;
+        margin-top: 5vh;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1vh 2vw 1vh 2vw;
+        animation-name: recipe_title_animate;
+        animation-duration: 0.7s;
+        border-radius: 3vh;
+        font-size: 4.5vh;
+        text-align: center;
+    }
+
+    .main_info {
+        width: 90%;
+        height: 60vh;
+        margin-top: 10vh;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        .main_image {
+            width: 60%;
+            height: 100%;
+            border-radius: 3vh;
+            background-size: cover;
+            background-position: center center;
+            animation-name: main_recipe_image_animate;
+            animation-duration: 0.7s;
+        }
+        .description {
+            width: 30%;
+            max-height: 54vh;
+            position: absolute;
+            right: 0;
+            padding: 3vh 2vw 3vh 2vw;
+            border-radius: 3vh;
+            animation-name: recipe_description_animate;
+            animation-duration: 0.7s;
+            transition: max-height 0.5s;
+            font-style: italic;
+            font-size: 3vh;
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            z-index: 2;
+        }
+    }
+
+    .other {
+        width: 90%;
+        margin-top: 10vh;
+        display: flex;
+        justify-content: space-between;
+        .left_info {
+            width: 30%;
+            animation-name: left_info_animation;
+            animation-duration: 0.7s;
+            .info {
+                width: 100%;
+                padding: 3vh 2vw 2vh 2vw;
+                display: flex;
+                flex-direction: column;
+                border-radius: 3vh;
+                & span {
+                    margin-bottom: 1vh;
+                    margin: auto;
+                    font-size: 3.5vh;
+                }
+                & div {
+                    margin-top: 1vh;
+                    font-size: 2.7vh;
+                }
+            }
+
+            .nutrients {
+                width: 100%;
+                margin-top: 5vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                padding: 3vh 2vw 2vh 2vw;
+                border-radius: 3vh;
+                .title {
+                    margin: auto;
+                    margin-bottom: 1.7vh;
+                    font-size: 3.5vh;
+                }
+
+                .chart {
+                    width: 100%;
+                    height: 13vh;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    .calories {
+                        height: 30%;
+                        background: #1df224;
+                        border-radius: 3vh;
+                        transition: width 1s;
+                    }
+                    .pfc {
+                        height: 30%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        & div {
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        .proteins {
+                            width: 25%;
+                            border-radius: 3vh;
+                            background: #f01d1d;
+                            transition: width 1s;
+                            color: #ab1313;
+                        }
+                        .fats {
+                            width: 25%;
+                            border-radius: 3vh;
+                            background: #f2eb1d;
+                            transition: width 1s;
+                            color: #bdaa00;
+                        }
+                        .carbohydrates {
+                            width: 50%;
+                            border-radius: 3vh;
+                            background: #0095ff;
+                            transition: width 1s;
+                            color: #005591;
+                        }
+                    }
+                }
+
+                .des {
+                    width: 100%;
+                    height: 15vh;
+                    margin-top: 2.4vh;
+                    font-size: 2.5vh;
+
+                    .calories {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        .calories_color {
+                            width: 2.5vh;
+                            height: 2.5vh;
+                            margin-right: 1vh;
+                            background: #1df224;
+                            border-radius: 100%;
+                        }
+                    }
+
+                    .nutrients_des {
+                        width: 100%;
+                        margin-top: 5%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-around;
+
+                        & div {
+                            display: flex;
+                            align-items: center;
+
+                            .round {
+                                width: 2.5vh;
+                                height: 2.5vh;
+                                margin-right: 1vh;
+                                border-radius: 100%;
+                            }
+                            .proteins_color {
+                                background: #f01d1d;
+                            }
+                            .fats_color {
+                                background: #f2eb1d;
+                            }
+                            .carbohydrates_color {
+                                background: #0095ff;
+                            }
+                            & div {
+                                display: flex;
+                                flex-direction: column;
+
+                                .count {
+                                    & span {
+                                        width: 100%;
+                                        display: flex;
+                                        justify-content: center;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                & button {
+                    height: 5vh;
+                    margin-bottom: 1vh;
+                    border-radius: 2vh;
+                    border: none;
+                    font-size: 2.3vh;
+                    transition: color 0.3s;
+                }
+            }
+        }
+
+        .right_info {
+            width: 60%;
+            animation-name: right_info_animation;
+            animation-duration: 0.7s;
+            .ingredients {
+                width: 100%;
+                box-sizing: border-box;
+                padding: 3vh 3vw 5vh 3vw;
+                display: flex;
+                flex-direction: column;
+                border-radius: 3vh;
+                .ingredients_title {
+                    margin-bottom: 1vh;
+                    margin: auto;
+                    font-size: 3.5vh;
+                }
+
+                .group {
+                    margin: 7vh 0 0 3vw;
+                    font-size: 3.3vh;
+                }
+
+                .ingredient {
+                    width: 100%;
+                    display: flex;
+                    margin-top: 2vh;
+                    font-size: 2.7vh;
+                    & span {
+                        margin: 0 0.2vw 0 0.2vw;
+                    }
+                    .line {
+                        position: relative;
+                        top: -0.5vh;
+                        margin: 0 0.2vw 0 0.2vw;
+                        flex-grow: 1;
+                        border-bottom: 0.5vh dotted;
+                    }
+                }
+            }
+        }
+    }
+
+    .steps {
+        width: 90%;
+        height: 60vh;
+        margin-top: 10vh;
+        & div {
+            width: 100%;
+            min-height: 50%;
+            position: relative;
+            margin-bottom: 5vh;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 3vh;
+            font-size: 2.7vh;
+            & img {
+                width: 50%;
+                height: 100%;
+                border-radius: 7vh;
+            }
+            .step_title {
+                height: 10vw;
+                position: relative;
+                display: flex;
+                align-items: center;
+                white-space: nowrap;
+                font-size: 4.5vh;
+            }
+            .step_text {
+                width: 40%;
+                height: 100%;
+                box-sizing: border-box;
+                padding: 2vh 4vw 2vh 4vw;
+                text-align: center;
+            }
+        }
+        .step_odd {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            .step_title {
+                transform: rotate(90deg);
+                right: 0.5vw;
+            }
+        }
+        .step_even {
+            display: flex;
+            align-items: center;
+            .step_title {
+                transform: rotate(-90deg);
+                left: 0.5vw;
+            }
+        }
+
+        .empty {
+            display: block;
+            height: 5vh;
+        }
+    }
+
+    .save_product_window {
+        width: 100vw;
+        height: 100vh;
+        display: none;
+        position: fixed;
+        top: 0;
+        justify-content: center;
+        align-items: center;
+        z-index: 101;
+
+        .background_for_window {
+            width: 100%;
+            height: 100%;
+            background: #000;
+            opacity: 0.8;
+            animation-name: modal_window_background_animate;
+            animation-duration: 0.3s;
+            position: relative;
+
+        }
+
+        .window {
+            width: 40vw;
+            height: 40vh;
+            position: fixed;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 2vh;
+            animation-name: modal_window_animate;
+            animation-duration: 0.2s;
+
+            .text {
+                position: absolute;
+                top: 10%;
+                margin: 0 10% 0 10%;
+                font-size: 3.5vh;
+                text-align: center;
+                font-weight: bold;
+            }
+
+            & input {
+                width: 70%;
+                height: 5vh;
+                position: absolute;
+                top: 40%;
+                border-radius: 2vh;
+                border-width: 0.35vh;
+                outline: none;
+                text-align: center;
+                font-size: 2.8vh;
+            }
+
+            .error {
+                position: absolute;
+                top: 58%;
+            }
+
+            & button {
+                width: 35%;
+                height: 13%;
+                position: absolute;
+                bottom: 10%;
+                border-radius: 2vh;
+                border-width: 0.35vh;
+                font-size: 2.5vh;
+            }
+            .no_button {
+                left: 8%;
+            }
+            .ok_button {
+                right: 8%;
+            }
+        }
+    }
+}
